@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EMICalculator</string>
+    <string name="pi_title">Payment Results</string>
+    <string name="pa_title">Payment\namount</string>
+    <string name="emi_result">EMI RESULT</string>
+    <string name="mort_title">Mortgage</string>
+    <string name="int_title">Interest rate</string>
+    <string name="ten_title">Tenure (Months)</string>
+    <string name="balance_label">Balance after _-month period</string>
+    <string name="total_paid_label">Total paid</string>
+    <string name="int_paid_label">Interest paid</string>
+    <string name="princ_paid_label">Principle paid</string>
+    <string name="start_over">Start over</string>
+    <string name="app_title">EMI Calculator</string>
+</resources>

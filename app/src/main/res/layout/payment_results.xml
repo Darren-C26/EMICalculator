@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/mort_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/mort_title"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/pa_title"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pa_title"
+        app:layout_constraintTop_toBottomOf="@+id/pa_title" />
+
+    <TextView
+        android:id="@+id/emi_result"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="#D1F4D4"
+        android:paddingLeft="12sp"
+        android:paddingTop="2sp"
+        android:paddingRight="12sp"
+        android:text="@string/emi_result"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pa_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pa_title"
+        app:layout_constraintTop_toTopOf="@+id/pa_title" />
+
+    <TextView
+        android:id="@+id/pi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/pi_title"
+        android:textColor="#276C2D"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pa_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/pa_title"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/emi_result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pi_title" />
+
+    <TextView
+        android:id="@+id/mortgage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/emi_result"
+        app:layout_constraintStart_toStartOf="@+id/emi_result"
+        app:layout_constraintTop_toBottomOf="@+id/emi_result" />
+
+    <TextView
+        android:id="@+id/interest_rate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/int_title"
+        app:layout_constraintEnd_toEndOf="@+id/mortgage"
+        app:layout_constraintStart_toStartOf="@+id/mortgage"
+        app:layout_constraintTop_toTopOf="@+id/int_title" />
+
+    <TextView
+        android:id="@+id/int_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/int_title"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/mort_title"
+        app:layout_constraintStart_toStartOf="@+id/mort_title"
+        app:layout_constraintTop_toBottomOf="@+id/mort_title" />
+
+    <TextView
+        android:id="@+id/ten_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ten_title"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/int_title"
+        app:layout_constraintStart_toStartOf="@+id/int_title"
+        app:layout_constraintTop_toBottomOf="@+id/int_title" />
+
+    <TextView
+        android:id="@+id/tenure_months"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ten_title"
+        app:layout_constraintEnd_toEndOf="@+id/interest_rate"
+        app:layout_constraintStart_toStartOf="@+id/interest_rate"
+        app:layout_constraintTop_toTopOf="@+id/ten_title" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tenure_months" />
+
+    <TextView
+        android:id="@+id/bal_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/balance_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/total_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingTop="12sp"
+        android:text="@string/total_paid_label"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/ten_title"
+        app:layout_constraintStart_toStartOf="@+id/ten_title"
+        app:layout_constraintTop_toBottomOf="@+id/bal_label" />
+
+    <TextView
+        android:id="@+id/int_paid_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/int_paid_label"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/total_label"
+        app:layout_constraintStart_toStartOf="@+id/total_label"
+        app:layout_constraintTop_toBottomOf="@+id/total_label" />
+
+    <TextView
+        android:id="@+id/princ_paid_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/princ_paid_label"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/int_paid_label"
+        app:layout_constraintStart_toStartOf="@+id/int_paid_label"
+        app:layout_constraintTop_toBottomOf="@+id/int_paid_label" />
+
+    <View
+        android:id="@+id/paid_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#D0F3D3"
+        app:layout_constraintBottom_toBottomOf="@id/princ_paid"
+        app:layout_constraintEnd_toEndOf="@id/princ_paid"
+        app:layout_constraintStart_toStartOf="@id/princ_paid"
+        app:layout_constraintTop_toTopOf="@+id/total_paid" />
+
+    <TextView
+        android:id="@+id/total_paid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="12sp"
+        android:paddingEnd="12sp"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/total_label"
+        app:layout_constraintEnd_toEndOf="@+id/tenure_months"
+        app:layout_constraintStart_toStartOf="@+id/tenure_months"
+        app:layout_constraintTop_toTopOf="@+id/total_label" />
+
+    <TextView
+        android:id="@+id/interest_paid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingEnd="12sp"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/int_paid_label"
+        app:layout_constraintEnd_toEndOf="@+id/total_paid"
+        app:layout_constraintStart_toStartOf="@+id/total_paid"
+        app:layout_constraintTop_toTopOf="@+id/int_paid_label" />
+
+    <TextView
+        android:id="@+id/princ_paid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingEnd="12sp"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/princ_paid_label"
+        app:layout_constraintEnd_toEndOf="@+id/interest_paid"
+        app:layout_constraintStart_toStartOf="@+id/interest_paid"
+        app:layout_constraintTop_toTopOf="@+id/princ_paid_label" />
+
+    <Button
+        android:id="@+id/b_start_over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#4E5370"
+        android:text="@string/start_over"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
