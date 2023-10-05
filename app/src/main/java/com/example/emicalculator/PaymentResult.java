@@ -11,6 +11,7 @@ import android.text.Spanned;
 import android.text.style.RelativeSizeSpan;
 public class PaymentResult extends AppCompatActivity{
 
+    // UI Elements are initialized for labels and calculated figures
     TextView mortgage;
     TextView interest;
     TextView tenure;
@@ -27,6 +28,7 @@ public class PaymentResult extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment_results);
 
+        // Initialize TextViews and Button
         mortgage = findViewById(R.id.mortgage);
         interest = findViewById(R.id.interest_rate);
         tenure = findViewById(R.id.tenure_months);
@@ -38,6 +40,7 @@ public class PaymentResult extends AppCompatActivity{
         princ_paid = findViewById(R.id.princ_paid);
         b_start_over = findViewById(R.id.b_start_over);
 
+        // Retrieve data passed from Intent and set it to the TextViews and EMI variable
         mortgage.setText(getIntent().getStringExtra("mortgage"));
         interest.setText(getIntent().getStringExtra("interest"));
         tenure.setText(getIntent().getStringExtra("tenure"));
@@ -52,18 +55,20 @@ public class PaymentResult extends AppCompatActivity{
         SpannableString spannableString2 = new SpannableString(perMonthText);
         spannableString2.setSpan(new RelativeSizeSpan(0.5f), 0, perMonthText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        // Combine the parts
+        // Combine the EMI value with the "/month" label
         builder.append(String.format("$%.2f" , emi));
         builder.append(spannableString2);
 
+        // Set the styled EMI text to the emi_result TextView
         emi_result.setText(builder);
 
+        // Set labels and values for payment details TextViews
         balance_label.setText("Balance after " + tenure.getText().toString() + "-month period");
         total_paid.setText(getIntent().getStringExtra("total_paid"));
         interest_paid.setText(getIntent().getStringExtra("interest_paid"));
         princ_paid.setText(getIntent().getStringExtra("mortgage"));
 
-
+        // Use "Start Over" button to return to MainActivity when clicked (via click listener)
         b_start_over.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
